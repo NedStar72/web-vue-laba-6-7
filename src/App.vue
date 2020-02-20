@@ -16,8 +16,6 @@ export default {
 </script>
  
 <style lang="scss">
-@import "./styles/index.scss";
-
 #hello {
   font-family: Verdana;
   color: navy;

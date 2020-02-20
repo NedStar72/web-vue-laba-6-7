@@ -1,12 +1,18 @@
+const fs = require('fs');
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackOnBuildPlugin = require('on-build-webpack');
 
 module.exports = {
     mode: 'development',
-    entry: './src/main.js',
+    entry: {
+        build: './src/main.js',
+        style: './src/styles/index.scss'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'build.js'
+        filename: '[name].js'
     },
     module: {
         rules: [
@@ -19,23 +25,23 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
-                test: /\.css$/,
+                test: /\.(sa|sc|c)ss$/,
                 use: [
-                    'vue-style-loader',
-                    'css-loader'
-                ]
-            },
-            {
-                test: /\.s[ac]ss$/,
-                use: [
-                    'vue-style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader'
-                ],
+                ]
             },
         ]
     },
     plugins: [
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+        }),
+        new WebpackOnBuildPlugin(() => {
+            fs.unlinkSync(path.resolve(__dirname, 'dist') + '\\style.js');
+            fs.unlinkSync(path.resolve(__dirname, 'dist') + '\\build.css')
+        })
     ]
 };
