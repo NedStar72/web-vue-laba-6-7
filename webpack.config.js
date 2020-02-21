@@ -27,11 +27,20 @@ module.exports = {
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                     MiniCssExtractPlugin.loader,
+                    //'vue-style-loader',
                     'css-loader',
                     'sass-loader'
                 ]
             },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    esModule: false,
+                    name: '[name].[ext]?[hash]'
+                }
+            }
         ]
     },
     plugins: [
@@ -41,7 +50,6 @@ module.exports = {
         }),
         new WebpackOnBuildPlugin(() => {
             fs.unlinkSync(path.resolve(__dirname, 'dist') + '\\style.js');
-            fs.unlinkSync(path.resolve(__dirname, 'dist') + '\\build.css')
         })
     ]
 };

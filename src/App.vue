@@ -1,6 +1,7 @@
 <template>
   <div id="hello">
     <h2>{{message}}</h2>
+    <img src="./assets/plus.png">
   </div>
 </template>
  
@@ -16,6 +17,7 @@ export default {
 </script>
  
 <style lang="scss">
+@import "./styles/index.scss";
 #hello {
   font-family: Verdana;
   color: navy;
