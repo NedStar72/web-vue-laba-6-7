@@ -1,6 +1,6 @@
 <template>
-  <div id="hello">
-    <div class="img"></div>
+  <div class="container">
+    <h1>Title</h1>
     <my-table :data="data" @update="dataUpdateHandler" />
   </div>
 </template>

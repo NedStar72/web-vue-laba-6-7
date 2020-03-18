@@ -1,6 +1,6 @@
 <template>
-  <table>
-    <tr v-for="(obj, i) in data" :key="i">
+  <table class="table table-bordered table-hover">
+    <tr class="d-flex" v-for="(obj, i) in data" :key="i">
       <cell
         v-for="(property, name) in obj"
         :key="i + '_' + name"
@@ -8,6 +8,7 @@
         :name="name"
         :id="obj.id"
         :editable="name !== 'id'"
+        classCss="col-3"
         @update="updateCellHandler"
       />
     </tr>

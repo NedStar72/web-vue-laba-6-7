@@ -1,7 +1,8 @@
 <template>
-  <td @dblclick="dblclickHandler">
+  <td @dblclick="dblclickHandler" :class="classCss">
     <span v-if="!isEdit">{{ val }}</span>
     <input
+      class="form-control d-inline-block w-auto"
       ref="input"
       v-if="isEdit"
       :type="type"
@@ -29,6 +30,11 @@ export default {
       type: Boolean,
       required: false,
       default: true
+    },
+    classCss: {
+      type: String,
+      required: false,
+      default: null
     }
   },
   data() {

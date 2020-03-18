@@ -1,9 +1,5 @@
 body{
-    background-color: rgb(255, 129, 129);
-}
-
-#hello {
-  font-family: Verdana;
+    background-color: rgb(255, 255, 255);
 }
 
 .img{
@@ -14,4 +10,11 @@ body{
 
 .img2{
   background: url('../assets/1.png') no-repeat 0 0;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: .05rem .35rem;
 }

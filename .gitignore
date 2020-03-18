@@ -1,3 +1,5 @@
 node_modules
-dist/
+dist/css/
+dist/img/
+dist/*.js
 desktop.ini
