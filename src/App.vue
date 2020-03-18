@@ -1,7 +1,7 @@
 <template>
   <div id="hello">
     <img src="./assets/plus.png" />
-    <my-table :data="data"/>
+    <my-table :data="data" @update="dataUpdateHandler"/>
   </div>
 </template>
  
@@ -12,8 +12,18 @@ export default {
   name: "app",
   data() {
     return {
-      data: [{ name: "123" }, { name: "456" }]
+      data: []
     };
+  },
+  mounted() {
+    if (localStorage.data) {
+      this.data = JSON.parse(localStorage.data);
+    }
+  },
+  methods:{
+    dataUpdateHandler(){
+      localStorage.data = JSON.stringify(this.data);
+    }
   },
   components: {
     MyTable
