@@ -1,25 +1,24 @@
 <template>
   <div id="hello">
-    <h2>{{message}}</h2>
-    <img src="./assets/plus.png">
+    <img src="./assets/plus.png" />
+    <my-table :data="data"/>
   </div>
 </template>
  
 <script>
+import MyTable from "./components/MyTable";
+
 export default {
   name: "app",
   data() {
     return {
-      message: "Welcome to Vue.js"
+      data: [{ name: "123" }, { name: "456" }]
     };
+  },
+  components: {
+    MyTable
   }
 };
 </script>
  
-<style lang="scss">
-@import "./styles/index.scss";
-#hello {
-  font-family: Verdana;
-  color: navy;
-}
-</style>
+<style src="./styles/index.scss"lang="scss"></style>

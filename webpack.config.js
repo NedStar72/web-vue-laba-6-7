@@ -1,18 +1,18 @@
-const fs = require('fs');
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebpackOnBuildPlugin = require('on-build-webpack');
 
 module.exports = {
     mode: 'development',
+    // devtool: "sourcemap",
+    // debug: true,
     entry: {
-        build: './src/main.js',
-        style: './src/styles/index.scss'
+        build: './src/main.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: '[name].js',
+        publicPath: 'dist/'
     },
     module: {
         rules: [
@@ -27,8 +27,7 @@ module.exports = {
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
-                     MiniCssExtractPlugin.loader,
-                    //'vue-style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader'
                 ]
@@ -38,18 +37,21 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     esModule: false,
-                    name: '[name].[ext]?[hash]'
+                    name: '[name].[ext]'
                 }
             }
         ]
+    },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        },
+        extensions: ['*', '.js', '.vue', '.json']
     },
     plugins: [
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css',
-        }),
-        new WebpackOnBuildPlugin(() => {
-            fs.unlinkSync(path.resolve(__dirname, 'dist') + '\\style.js');
         })
     ]
 };
