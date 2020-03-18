@@ -1,6 +1,6 @@
 <template>
   <div id="hello">
-    <img src="./assets/plus.png" />
+    <div class="img"></div>
     <my-table :data="data" @update="dataUpdateHandler" />
   </div>
 </template>

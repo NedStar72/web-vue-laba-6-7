@@ -1,6 +1,7 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageSpritePlugin = require('image-sprite-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -10,9 +11,9 @@ module.exports = {
         build: './src/main.js'
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js',
-        publicPath: 'dist/'
+        path: __dirname,
+        filename: 'dist/[name].js',
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -51,7 +52,16 @@ module.exports = {
     plugins: [
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: 'dist/css/[name].css',
+        }),
+        new ImageSpritePlugin({
+            commentOrigin: false,
+            compress: true,
+            extensions: ['gif', 'svg', 'jpg', 'png'],
+            indent: '',
+            log: true,
+            outputFilename: 'dist/img/sprite.png',
+            padding: 10,
         })
     ]
 };
