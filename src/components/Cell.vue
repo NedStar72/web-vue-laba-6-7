@@ -17,13 +17,18 @@ export default {
   name: "cell",
   props: {
     val: "",
-    row: {
+    id: {
       type: Number,
       required: true
     },
     name: {
       type: String,
       required: true
+    },
+    editable: {
+      type: Boolean,
+      required: false,
+      default: true
     }
   },
   data() {
@@ -34,14 +39,20 @@ export default {
   },
   methods: {
     dblclickHandler(e) {
-      this.isEdit = true;
-      setTimeout(() => {
-        this.$refs.input.focus();
-      });
+      this.isEdit = this.editable;
+      if (this.isEdit)
+        setTimeout(() => {
+          this.$refs.input.focus();
+        });
     },
     afterEditHandler(e) {
       this.isEdit = false;
-      this.$emit("update", e.target.value, this.name, this.row);
+      this.$emit(
+        "update",
+        this.type == "number" ? parseInt(e.target.value) : e.target.value,
+        this.name,
+        this.id
+      );
     }
   },
   created() {

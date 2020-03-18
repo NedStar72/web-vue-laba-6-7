@@ -1,7 +1,7 @@
 <template>
   <div id="hello">
     <img src="./assets/plus.png" />
-    <my-table :data="data" @update="dataUpdateHandler"/>
+    <my-table :data="data" @update="dataUpdateHandler" />
   </div>
 </template>
  
@@ -16,13 +16,31 @@ export default {
     };
   },
   mounted() {
-    if (localStorage.data) {
-      this.data = JSON.parse(localStorage.data);
-    }
+    let promise = new Promise((resolve, reject) => {
+      if (localStorage.data) {
+        resolve(JSON.parse(localStorage.data));
+      } else {
+        reject("Missing data.");
+      }
+    });
+    promise
+      .then(
+        res => {
+          this.data = res;
+        },
+        err => {
+          console.log(err);
+          this.data = [];
+        }
+      )
+      .catch(err => console.log(err));
   },
-  methods:{
-    dataUpdateHandler(){
-      localStorage.data = JSON.stringify(this.data);
+  methods: {
+    dataUpdateHandler() {
+      let promise = new Promise(resolve => {
+        localStorage.data = JSON.stringify(this.data);
+        resolve();
+      }).then(() => console.log(`[${Date.now()}]  Data synchronized.`));
     }
   },
   components: {

@@ -6,7 +6,8 @@
         :key="i + '_' + name"
         :val="property"
         :name="name"
-        :row="i"
+        :id="obj.id"
+        :editable="name !== 'id'"
         @update="updateCellHandler"
       />
     </tr>
@@ -27,10 +28,9 @@ export default {
     }
   },
   methods: {
-    updateCellHandler(value, name, row) {
-      console.log(value, name, row);
-      this.data[row][name] = value;
-      this.$emit('update');
+    updateCellHandler(value, name, id) {
+      this.data[this.data.findIndex(obj => obj.id === id)][name] = value;
+      this.$emit("update");
     }
   },
   components: {
