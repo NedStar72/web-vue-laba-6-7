@@ -1,5 +1,6 @@
 node_modules
 dist/css/
 dist/img/
+dist/temp/
 dist/*.js
 desktop.ini

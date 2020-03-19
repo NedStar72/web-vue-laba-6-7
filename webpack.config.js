@@ -1,7 +1,9 @@
+const fs = require('fs');
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageSpritePlugin = require('image-sprite-webpack-plugin');
+const WebpackOnBuildPlugin = require('on-build-webpack');
 
 module.exports = {
     mode: 'development',
@@ -38,7 +40,7 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     esModule: false,
-                    name: '[name].[ext]'
+                    name: 'dist/temp/[name].[ext]'
                 }
             }
         ]
@@ -62,6 +64,9 @@ module.exports = {
             log: true,
             outputFilename: 'dist/img/sprite.png',
             padding: 10,
+        }),
+        new WebpackOnBuildPlugin(() => {
+            fs.rmdirSync(path.resolve(__dirname, 'dist') + '\\temp', { recursive: true });
         })
     ]
 };

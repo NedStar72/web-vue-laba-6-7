@@ -1,7 +1,30 @@
 <template>
   <div class="container">
-    <h1>Title</h1>
-    <my-table :data="data" @update="dataUpdateHandler" />
+    <h1 class="mt-3 mb-4">Демография России (2019)</h1>
+    <my-table
+      :data="data"
+      :header="[
+      {
+        invisible: true
+      },
+      {
+        name: 'Регион',
+        stretchable: true,
+        editable: true,
+        css: 'col'
+      },
+      {
+        name: 'Рождаемость',
+        editable: true,
+        css: 'col-2'
+      },
+      {
+        name: 'Смертность',
+        editable: true,
+        css: 'col-2'
+      }]"
+      @update="dataUpdateHandler"
+    />
   </div>
 </template>
  

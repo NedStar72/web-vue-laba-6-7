@@ -1,12 +1,12 @@
 <template>
   <td @dblclick="dblclickHandler" :class="classCss">
-    <span v-if="!isEdit">{{ val }}</span>
+    <span v-if="!isEdit">{{ value }}</span>
     <input
-      class="form-control d-inline-block w-auto"
+      class="form-control d-inline-block mw-100 w-auto"
       ref="input"
       v-if="isEdit"
       :type="type"
-      :value="val"
+      :value="value"
       @blur="afterEditHandler"
       @keyup.enter="afterEditHandler"
     />
@@ -17,7 +17,7 @@
 export default {
   name: "cell",
   props: {
-    val: "",
+    value: "",
     id: {
       type: Number,
       required: true
@@ -62,7 +62,7 @@ export default {
     }
   },
   created() {
-    switch (typeof this.val) {
+    switch (typeof this.value) {
       case "string":
         this.type = "text";
         break;
