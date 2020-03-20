@@ -1,11 +1,11 @@
 <template>
-  <td @dblclick="dblclickHandler" :class="classCss">
-    <span v-if="!isEdit">{{ value }}</span>
+  <td @dblclick="dblclickHandler" :class="css">
+    <span v-if="!isEditing">{{ value }}</span>
     <input
       class="form-control d-inline-block mw-100 w-auto"
       ref="input"
-      v-if="isEdit"
-      :type="type"
+      v-if="isEditing"
+      :type="inputType"
       :value="value"
       @blur="afterEditHandler"
       @keyup.enter="afterEditHandler"
@@ -31,7 +31,7 @@ export default {
       required: false,
       default: true
     },
-    classCss: {
+    css: {
       type: String,
       required: false,
       default: null
@@ -39,23 +39,23 @@ export default {
   },
   data() {
     return {
-      isEdit: false,
-      type: ""
+      isEditing: false,
+      inputType: ""
     };
   },
   methods: {
     dblclickHandler(e) {
-      this.isEdit = this.editable;
-      if (this.isEdit)
+      this.isEditing = this.editable;
+      if (this.isEditing)
         setTimeout(() => {
           this.$refs.input.focus();
         });
     },
     afterEditHandler(e) {
-      this.isEdit = false;
+      this.isEditing = false;
       this.$emit(
         "update",
-        this.type == "number" ? parseInt(e.target.value) : e.target.value,
+        this.inputType == "number" ? parseInt(e.target.value) : e.target.value,
         this.name,
         this.id
       );
@@ -64,10 +64,10 @@ export default {
   created() {
     switch (typeof this.value) {
       case "string":
-        this.type = "text";
+        this.inputType = "text";
         break;
       case "number":
-        this.type = "number";
+        this.inputType = "number";
         break;
     }
   }

@@ -1,0 +1,21 @@
+[{
+    "id": 0,
+    "name": "Имя65",
+    "birthrate": 8,
+    "deathrate": 16
+}, {
+    "id": 1,
+    "name": "Имя",
+    "birthrate": 4,
+    "deathrate": 17
+}, {
+    "id": 2,
+    "name": "Название региона345",
+    "birthrate": 3,
+    "deathrate": 0
+}, {
+    "id": 3,
+    "name": "Название региона",
+    "birthrate": 7,
+    "deathrate": -1
+}]
