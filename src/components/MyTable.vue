@@ -1,90 +1,56 @@
 <template>
-  <table class="table table-striped table-borderless">
+  <table :class="tableStyle">
     <thead>
-      <tr class="d-flex flex-row">
+      <tr>
         <th
-          v-for="(col, i) in header"
-          v-if="!col.invisible"
-          :key="i"
-          :class="col.css"
-          @click="$emit('sort', i)"
+          v-for="col in header"
+          :key="col.id"
+          :class="col.style"
+          @click="$emit('sort', col.id)"
         >{{ col.name }}</th>
       </tr>
     </thead>
     <tbody>
-      <tr class="d-flex flex-row" v-for="(obj, i) in data" :key="i">
-        <cell
-          v-for="props in objToList(obj)"
-          :key="i + '_' + props.name"
-          :id="obj.id"
-          :name="props.name"
-          :value="props.value"
-          :editable="props.editable"
-          :css="props.css"
-          @update="cellUpdateHandler"
-        />
-      </tr>
+      <row
+        v-for="row in rows"
+        :id="row.id"
+        :key="row.id"
+        :cells="row.cells"
+        @update="rowUpdateHandler"
+      />
     </tbody>
   </table>
 </template>
  
 <script>
-import Cell from "./Cell";
+import Row from "./Row";
 
 export default {
   name: "my-table",
   props: {
+    tableStyle: {
+      type: String,
+      required: false,
+      default: ""
+    },
     header: {
       type: Array,
       required: false,
       default: []
     },
-    data: {
-      type: Array
-    },
-    filterPropName: {
-      type: String,
+    rows: {
+      type: Array,
       required: false,
-      default: null
-    },
-    filter: {
-      type: String,
-      required: false,
-      default: ""
-    },
-    sortDuration: {
-      type: Boolean,
-      required: false,
-      default: true
-    },
-    sortCol: {
-      type: Number,
-      required: false,
-      default: 0
+      default: () => []
     }
   },
   methods: {
-    cellUpdateHandler(value, name, id) {
-      this.$emit("update", value, name, id);
-    },
-    objToList(obj) {
-      let arr = [];
-      // Добавить фильтр
-      for (const [i, [key, value]] of Object.entries(Object.entries(obj))) {
-        if (!this.header[i].invisible) {
-          arr.push({
-            name: key,
-            value,
-            editable: this.header[i].editable,
-            css: this.header[i].css
-          });
-        }
-      }
-      return arr;
+    rowUpdateHandler(id, propName, newValue) {
+      this.$emit("update", id, propName, newValue);
     }
   },
   components: {
-    Cell
+    Row
   }
 };
 </script>

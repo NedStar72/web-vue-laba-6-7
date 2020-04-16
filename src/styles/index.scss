@@ -1,18 +1,47 @@
-body{
-    background-color: rgb(255, 255, 255);
+body {
+  background-color: rgb(255, 255, 255);
 }
 
-.img{
+.img {
   background: url('../assets/plus.png') no-repeat 0 0;
   width: 25px;
   height: 25px;
 }
 
-.img2{
+.img2 {
   background: url('../assets/1.png') no-repeat 0 0;
 }
 
 .form-control {
   height: auto;
   padding: .05rem .35rem;
+}
+
+.table-sorted {
+
+  @mixin sorting-mixin($top) {
+    content: url('../assets/arrow.png');
+    position: absolute;
+    right: 1em;
+    top: $top;
+    width: 10px;
+    height: 10px;
+    font-weight: 900;
+    font-size: 1rem;
+    opacity: 0.5;
+  }
+
+  .sorting::before {
+    @include sorting-mixin(0.4em);
+  }
+
+  .sorting::after {
+    @include sorting-mixin(2em);
+    transform: rotate(180deg);
+  }
+
+  .sorting__ASC::after,
+  .sorting__DESC::before {
+    opacity: 1;
+  }
 }

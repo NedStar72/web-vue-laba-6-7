@@ -1,0 +1,56 @@
+[{
+        "name": "Регион",
+        "propName": "name",
+        "defaultValue": "noname",
+        "headerStyle": "position-relative sorting",
+        "optionalData": {
+            "editable": true,
+            "cellStyle": "",
+            "inputStyle": "form-control d-inline-block mw-100 w-auto"
+        }
+    },
+    {
+        "name": "2018 (рождаемость)",
+        "propName": ["years", "2018", "birthRate"],
+        "defaultValue": 0,
+        "headerStyle": "position-relative sorting",
+        "optionalData": {
+            "editable": true,
+            "cellStyle": "",
+            "inputStyle": "form-control d-inline-block mw-100 w-auto"
+        }
+    },
+    {
+        "name": "2018 (смертность)",
+        "propName": ["years", "2018", "deathRate"],
+        "defaultValue": 0,
+        "headerStyle": "position-relative sorting",
+        "optionalData": {
+            "editable": true,
+            "cellStyle": "",
+            "inputStyle": "form-control d-inline-block mw-100 w-auto"
+        }
+    },
+    {
+        "name": "2019 (рождаемость)",
+        "propName": ["years", "2019", "birthRate"],
+        "defaultValue": 0,
+        "headerStyle": "position-relative sorting",
+        "optionalData": {
+            "editable": true,
+            "cellStyle": "",
+            "inputStyle": "form-control d-inline-block mw-100 w-auto"
+        }
+    },
+    {
+        "name": "2019 (смертность)",
+        "propName": ["years", "2019", "deathRate"],
+        "defaultValue": 0,
+        "headerStyle": "position-relative sorting",
+        "optionalData": {
+            "editable": true,
+            "cellStyle": "",
+            "inputStyle": "form-control d-inline-block mw-100 w-auto"
+        }
+    }
+]

@@ -1,14 +1,15 @@
 <template>
-  <td @dblclick="dblclickHandler" :class="css">
+  <td @dblclick="dblclickHandler" :class="cellStyle">
     <span v-if="!isEditing">{{ value }}</span>
     <input
-      class="form-control d-inline-block mw-100 w-auto"
+      v-else
       ref="input"
-      v-if="isEditing"
+      :class="inputStyle"
       :type="inputType"
       :value="value"
-      @blur="afterEditHandler"
-      @keyup.enter="afterEditHandler"
+      :step="step"
+      @blur="editingEndHandler"
+      @keyup.enter="editingEndHandler"
     />
   </td>
 </template>
@@ -17,31 +18,44 @@
 export default {
   name: "cell",
   props: {
-    value: "",
-    id: {
+    propName: {
+      type: [String, Array],
+      required: true
+    },
+    value: [Number, String],
+    step: {
       type: Number,
-      required: true
-    },
-    name: {
-      type: String,
-      required: true
-    },
-    editable: {
-      type: Boolean,
       required: false,
-      default: true
+      default: 0.1
     },
-    css: {
-      type: String,
-      required: false,
-      default: null
+    optionalData: {
+      type: Object,
+      required: false
     }
   },
   data() {
     return {
-      isEditing: false,
-      inputType: ""
+      isEditing: false
     };
+  },
+  computed: {
+    editable() {
+      if (typeof this.optionalData.editable == "undefined") return true;
+      return this.optionalData && this.optionalData.editable;
+    },
+    cellStyle() {
+      return this.optionalData && this.optionalData.cellStyle;
+    },
+    inputStyle() {
+      return this.optionalData && this.optionalData.inputStyle;
+    },
+    inputType() {
+      if (typeof this.value == "number") return "number";
+      return "text";
+    },
+    step() {
+      if (typeof this.value == "number") return 0.1;
+    }
   },
   methods: {
     dblclickHandler(e) {
@@ -51,24 +65,13 @@ export default {
           this.$refs.input.focus();
         });
     },
-    afterEditHandler(e) {
+    editingEndHandler(e) {
       this.isEditing = false;
       this.$emit(
         "update",
-        this.inputType == "number" ? parseInt(e.target.value) : e.target.value,
-        this.name,
-        this.id
+        this.propName,
+        this.inputType == "number" ? parseInt(e.target.value) : e.target.value
       );
-    }
-  },
-  created() {
-    switch (typeof this.value) {
-      case "string":
-        this.inputType = "text";
-        break;
-      case "number":
-        this.inputType = "number";
-        break;
     }
   }
 };
