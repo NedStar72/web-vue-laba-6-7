@@ -1,8 +1,8 @@
 <template>
   <td @dblclick="dblclickHandler" :class="cellStyle">
-    <img v-if="increase" src="../assets/up-arrow.png" alt=""/>
-    <img v-if="nocrease" src="../assets/minus.png" alt=""/>
-    <img v-if="decrease" src="../assets/down-arrow.png" alt=""/>
+    <img v-if="increase" src="../assets/up-arrow.png" alt />
+    <img v-if="nocrease" src="../assets/minus.png" alt />
+    <img v-if="decrease" src="../assets/down-arrow.png" alt />
     <span v-if="!isEditing">{{ value }}</span>
     <input
       v-else
@@ -31,10 +31,7 @@ export default {
       required: false,
       default: 0.1
     },
-    optionalData: {
-      type: Object,
-      required: false
-    }
+    optionalData: Object
   },
   data() {
     return {
@@ -57,10 +54,9 @@ export default {
       return "text";
     },
     inputStep() {
-      if (typeof this.value == "number") return this.step;
+      if (this.inputType == "number") return this.step;
     },
     increase() {
-      console.log(this.optionalData.crease);
       return this.optionalData && this.optionalData.crease == 1;
     },
     nocrease() {

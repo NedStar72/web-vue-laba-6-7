@@ -28,21 +28,9 @@ import Row from "./Row";
 export default {
   name: "my-table",
   props: {
-    tableStyle: {
-      type: String,
-      required: false,
-      default: ""
-    },
-    header: {
-      type: Array,
-      required: false,
-      default: []
-    },
-    rows: {
-      type: Array,
-      required: false,
-      default: () => []
-    }
+    tableStyle: String,
+    header: Array,
+    rows: Array
   },
   methods: {
     rowUpdateHandler(id, propName, newValue) {

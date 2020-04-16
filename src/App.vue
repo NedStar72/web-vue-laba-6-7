@@ -96,6 +96,7 @@ export default {
           this.$set(obj, lastPropName, newValue);
         else obj[lastPropName] = newValue;
       }
+      this.syncData(this.my_data);
     },
     sortHandler(col) {
       if (this.sortCol == col) this.sortDuration = !this.sortDuration;
@@ -210,6 +211,13 @@ export default {
         if (a.name < b.name) return -1;
         else return 1;
       });
+      this.syncHeader(this.my_header);
+    },
+    syncData(newData) {
+      localStorage.data = JSON.stringify(newData);
+    },
+    syncHeader(newHeader) {
+      localStorage.header = JSON.stringify(newHeader);
     }
   },
   mounted() {
@@ -221,7 +229,7 @@ export default {
     }
 
     //Try to get data from localStorage
-    if (localStorage.header) {
+    if (localStorage.data) {
       this.my_data = JSON.parse(localStorage.data);
     } else {
       this.my_data = jsonData;
