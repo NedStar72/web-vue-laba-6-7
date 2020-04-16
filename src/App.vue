@@ -2,6 +2,7 @@
   <div class="container">
     <h1 class="mt-3 mb-4">Демография России</h1>
     <div>
+      <span class="font-weight-bold mr-2">Фильтр</span>
       <input type="text" v-model="filter" class="form-control d-inline-block mw-100 w-auto mr-3" />
     </div>
     <my-table
@@ -26,7 +27,7 @@
         @click="addButtonClickHandler"
       >Добавить элем.</button>
     </div>
-    <div>
+    <div class="mb-2">
       <input type="number" ref="year" class="form-control d-inline-block mw-100 w-auto mr-3" />
       <button
         v-if="true"

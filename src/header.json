@@ -2,7 +2,7 @@
         "name": "Регион",
         "propName": "name",
         "defaultValue": "noname",
-        "headerStyle": "position-relative sorting",
+        "headerStyle": "position-relative sorting pr-4",
         "optionalData": {
             "editable": true,
             "cellStyle": "",
@@ -13,7 +13,7 @@
         "name": "2017 (рождаемость)",
         "propName": ["years", "2017", "birthRate"],
         "defaultValue": 0,
-        "headerStyle": "position-relative sorting",
+        "headerStyle": "position-relative sorting pr-4",
         "optionalData": {
             "editable": true,
             "cellStyle": "",
@@ -24,7 +24,7 @@
         "name": "2017 (смертность)",
         "propName": ["years", "2017", "deathRate"],
         "defaultValue": 0,
-        "headerStyle": "position-relative sorting",
+        "headerStyle": "position-relative sorting pr-4",
         "optionalData": {
             "editable": true,
             "cellStyle": "",
@@ -35,7 +35,7 @@
         "name": "2018 (рождаемость)",
         "propName": ["years", "2018", "birthRate"],
         "defaultValue": 0,
-        "headerStyle": "position-relative sorting",
+        "headerStyle": "position-relative sorting pr-4",
         "optionalData": {
             "editable": true,
             "cellStyle": "",
@@ -46,7 +46,7 @@
         "name": "2018 (смертность)",
         "propName": ["years", "2018", "deathRate"],
         "defaultValue": 0,
-        "headerStyle": "position-relative sorting",
+        "headerStyle": "position-relative sorting pr-4",
         "optionalData": {
             "editable": true,
             "cellStyle": "",

@@ -9,11 +9,11 @@ body {
 
 .table-sorted {
 
-  @mixin sorting-mixin($top) {
+  @mixin sorting-mixin($bot) {
     content: url('../assets/arrow.png');
     position: absolute;
-    right: 1em;
-    top: $top;
+    right: 0.5em;
+    bottom: $bot;
     width: 10px;
     height: 10px;
     font-weight: 900;
@@ -22,11 +22,11 @@ body {
   }
 
   .sorting::before {
-    @include sorting-mixin(0.4em);
+    @include sorting-mixin(2em);
   }
 
   .sorting::after {
-    @include sorting-mixin(2em);
+    @include sorting-mixin(0.4em);
     transform: rotate(180deg);
   }
 

@@ -1,4 +1,1109 @@
 {
-    "count": 0,
-    "data": []
+    "count": 85,
+    "data": [{
+        "id": 0,
+        "name": "Алтайский край",
+        "years": {
+            "2017": {
+                "birthRate": 10.86,
+                "deathRate": 14.03
+            },
+            "2018": {
+                "birthRate": 10.06,
+                "deathRate": 14.3
+            }
+        }
+    }, {
+        "id": 1,
+        "name": "Амурская область",
+        "years": {
+            "2017": {
+                "birthRate": 11.81,
+                "deathRate": 13.4
+            },
+            "2018": {
+                "birthRate": 11.21,
+                "deathRate": 13.38
+            }
+        }
+    }, {
+        "id": 2,
+        "name": "Архангельская область (с НАО)",
+        "years": {
+            "2017": {
+                "birthRate": 10.73,
+                "deathRate": 13
+            },
+            "2018": {
+                "birthRate": 9.86,
+                "deathRate": 13.17
+            }
+        }
+    }, {
+        "id": 3,
+        "name": "Астраханская область",
+        "years": {
+            "2017": {
+                "birthRate": 12.11,
+                "deathRate": 11.4
+            },
+            "2018": {
+                "birthRate": 11.64,
+                "deathRate": 11.57
+            }
+        }
+    }, {
+        "id": 4,
+        "name": "Белгородская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.75,
+                "deathRate": 13.46
+            },
+            "2018": {
+                "birthRate": 9.25,
+                "deathRate": 13.4
+            }
+        }
+    }, {
+        "id": 5,
+        "name": "Брянская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.54,
+                "deathRate": 15.36
+            },
+            "2018": {
+                "birthRate": 9.26,
+                "deathRate": 15.14
+            }
+        }
+    }, {
+        "id": 6,
+        "name": "Владимирская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.72,
+                "deathRate": 15.79
+            },
+            "2018": {
+                "birthRate": 9.24,
+                "deathRate": 15.89
+            }
+        }
+    }, {
+        "id": 7,
+        "name": "Волгоградская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.98,
+                "deathRate": 13.18
+            },
+            "2018": {
+                "birthRate": 9.33,
+                "deathRate": 13.25
+            }
+        }
+    }, {
+        "id": 8,
+        "name": "Вологодская область",
+        "years": {
+            "2017": {
+                "birthRate": 11.48,
+                "deathRate": 14.43
+            },
+            "2018": {
+                "birthRate": 10.54,
+                "deathRate": 14.31
+            }
+        }
+    }, {
+        "id": 9,
+        "name": "Воронежская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.61,
+                "deathRate": 14.62
+            },
+            "2018": {
+                "birthRate": 9.17,
+                "deathRate": 14.66
+            }
+        }
+    }, {
+        "id": 10,
+        "name": "Еврейская автономная область",
+        "years": {
+            "2017": {
+                "birthRate": 11.84,
+                "deathRate": 13.41
+            },
+            "2018": {
+                "birthRate": 11.79,
+                "deathRate": 13.66
+            }
+        }
+    }, {
+        "id": 11,
+        "name": "Забайкальский край",
+        "years": {
+            "2017": {
+                "birthRate": 13.34,
+                "deathRate": 11.7
+            },
+            "2018": {
+                "birthRate": 12.75,
+                "deathRate": 12.33
+            }
+        }
+    }, {
+        "id": 12,
+        "name": "Ивановская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.73,
+                "deathRate": 15.92
+            },
+            "2018": {
+                "birthRate": 9.1,
+                "deathRate": 16.13
+            }
+        }
+    }, {
+        "id": 13,
+        "name": "Иркутская область",
+        "years": {
+            "2017": {
+                "birthRate": 13.32,
+                "deathRate": 12.89
+            },
+            "2018": {
+                "birthRate": 12.9,
+                "deathRate": 12.91
+            }
+        }
+    }, {
+        "id": 14,
+        "name": "Кабардино-Балкарская Республика",
+        "years": {
+            "2017": {
+                "birthRate": 12.81,
+                "deathRate": 8.54
+            },
+            "2018": {
+                "birthRate": 12.45,
+                "deathRate": 7.82
+            }
+        }
+    }, {
+        "id": 15,
+        "name": "Калининградская область",
+        "years": {
+            "2017": {
+                "birthRate": 11,
+                "deathRate": 12.42
+            },
+            "2018": {
+                "birthRate": 10.29,
+                "deathRate": 12.08
+            }
+        }
+    }, {
+        "id": 16,
+        "name": "Калужская область",
+        "years": {
+            "2017": {
+                "birthRate": 10.82,
+                "deathRate": 14.79
+            },
+            "2018": {
+                "birthRate": 10.18,
+                "deathRate": 14.73
+            }
+        }
+    }, {
+        "id": 17,
+        "name": "Камчатский край",
+        "years": {
+            "2017": {
+                "birthRate": 11.77,
+                "deathRate": 10.95
+            },
+            "2018": {
+                "birthRate": 10.98,
+                "deathRate": 11.25
+            }
+        }
+    }, {
+        "id": 18,
+        "name": "Карачаево-Черкесская Республика",
+        "years": {
+            "2017": {
+                "birthRate": 11.03,
+                "deathRate": 9.32
+            },
+            "2018": {
+                "birthRate": 10.68,
+                "deathRate": 8.89
+            }
+        }
+    }, {
+        "id": 19,
+        "name": "Кемеровская область",
+        "years": {
+            "2017": {
+                "birthRate": 10.51,
+                "deathRate": 14.13
+            },
+            "2018": {
+                "birthRate": 9.88,
+                "deathRate": 14.29
+            }
+        }
+    }, {
+        "id": 20,
+        "name": "Кировская область",
+        "years": {
+            "2017": {
+                "birthRate": 10.73,
+                "deathRate": 14.46
+            },
+            "2018": {
+                "birthRate": 9.52,
+                "deathRate": 14.34
+            }
+        }
+    }, {
+        "id": 21,
+        "name": "Костромская область",
+        "years": {
+            "2017": {
+                "birthRate": 10.75,
+                "deathRate": 14.91
+            },
+            "2018": {
+                "birthRate": 9.75,
+                "deathRate": 14.87
+            }
+        }
+    }, {
+        "id": 22,
+        "name": "Краснодарский край",
+        "years": {
+            "2017": {
+                "birthRate": 11.95,
+                "deathRate": 12.44
+            },
+            "2018": {
+                "birthRate": 11.28,
+                "deathRate": 12.21
+            }
+        }
+    }, {
+        "id": 23,
+        "name": "Красноярский край",
+        "years": {
+            "2017": {
+                "birthRate": 12.36,
+                "deathRate": 12.27
+            },
+            "2018": {
+                "deathRate": 12.31,
+                "birthRate": 11.6
+            }
+        }
+    }, {
+        "id": 24,
+        "name": "Курганская область",
+        "years": {
+            "2017": {
+                "birthRate": 11.23,
+                "deathRate": 15.28
+            },
+            "2018": {
+                "birthRate": 10.35,
+                "deathRate": 15.53
+            }
+        }
+    }, {
+        "id": 25,
+        "name": "Курская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.67,
+                "deathRate": 15.57
+            },
+            "2018": {
+                "birthRate": 9.26,
+                "deathRate": 15.44
+            }
+        }
+    }, {
+        "id": 26,
+        "name": "Ленинградская область",
+        "years": {
+            "2017": {
+                "birthRate": 8.26,
+                "deathRate": 13.21
+            },
+            "2018": {
+                "birthRate": 7.56,
+                "deathRate": 12.72
+            }
+        }
+    }, {
+        "id": 27,
+        "name": "Липецкая область",
+        "years": {
+            "2017": {
+                "birthRate": 10.05,
+                "deathRate": 14.71
+            },
+            "2018": {
+                "birthRate": 9.95,
+                "deathRate": 14.84
+            }
+        }
+    }, {
+        "id": 28,
+        "name": "Магаданская область",
+        "years": {
+            "2017": {
+                "birthRate": 11.04,
+                "deathRate": 11.38
+            },
+            "2018": {
+                "birthRate": 9.77,
+                "deathRate": 11.56
+            }
+        }
+    }, {
+        "id": 29,
+        "name": "Москва",
+        "years": {
+            "2017": {
+                "birthRate": 10.71,
+                "deathRate": 9.51
+            },
+            "2018": {
+                "birthRate": 10.51,
+                "deathRate": 9.57
+            }
+        }
+    }, {
+        "id": 30,
+        "name": "Московская область",
+        "years": {
+            "2017": {
+                "birthRate": 11.85,
+                "deathRate": 12.22
+            },
+            "2018": {
+                "birthRate": 10.82,
+                "deathRate": 12.16
+            }
+        }
+    }, {
+        "id": 31,
+        "name": "Мурманская область",
+        "years": {
+            "2017": {
+                "birthRate": 10.38,
+                "deathRate": 11.08
+            },
+            "2018": {
+                "birthRate": 9.79,
+                "deathRate": 11.11
+            }
+        }
+    }, {
+        "id": 32,
+        "name": "Ненецкий автономный округ",
+        "years": {
+            "2017": {
+                "birthRate": 15.34,
+                "deathRate": 8.48
+            },
+            "2018": {
+                "birthRate": 13.76,
+                "deathRate": 9.08
+            }
+        }
+    }, {
+        "id": 33,
+        "name": "Нижегородская область",
+        "years": {
+            "2017": {
+                "birthRate": 10.58,
+                "deathRate": 14.73
+            },
+            "2018": {
+                "birthRate": 9.95,
+                "deathRate": 14.9
+            }
+        }
+    }, {
+        "id": 34,
+        "name": "Новгородская область",
+        "years": {
+            "2017": {
+                "birthRate": 10.28,
+                "deathRate": 17.21
+            },
+            "2018": {
+                "birthRate": 9.73,
+                "deathRate": 16.63
+            }
+        }
+    }, {
+        "id": 35,
+        "name": "Новосибирская область",
+        "years": {
+            "2017": {
+                "birthRate": 12.36,
+                "deathRate": 12.83
+            },
+            "2018": {
+                "birthRate": 11.69,
+                "deathRate": 12.73
+            }
+        }
+    }, {
+        "id": 36,
+        "name": "Омская область",
+        "years": {
+            "2017": {
+                "birthRate": 11.54,
+                "deathRate": 12.88
+            },
+            "2018": {
+                "birthRate": 10.92,
+                "deathRate": 12.76
+            }
+        }
+    }, {
+        "id": 37,
+        "name": "Оренбургская область",
+        "years": {
+            "2017": {
+                "birthRate": 11.61,
+                "deathRate": 13.31
+            },
+            "2018": {
+                "birthRate": 11.15,
+                "deathRate": 13.36
+            }
+        }
+    }, {
+        "id": 38,
+        "name": "Орловская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.56,
+                "deathRate": 15.84
+            },
+            "2018": {
+                "birthRate": 9.16,
+                "deathRate": 15.9
+            }
+        }
+    }, {
+        "id": 39,
+        "name": "Пензенская область",
+        "years": {
+            "2017": {
+                "birthRate": 8.99,
+                "deathRate": 14.16
+            },
+            "2018": {
+                "birthRate": 8.69,
+                "deathRate": 14.51
+            }
+        }
+    }, {
+        "id": 40,
+        "name": "Пермский край",
+        "years": {
+            "2017": {
+                "birthRate": 12.2,
+                "deathRate": 13.26
+            },
+            "2018": {
+                "birthRate": 11.24,
+                "deathRate": 13.24
+            }
+        }
+    }, {
+        "id": 41,
+        "name": "Приморский край",
+        "years": {
+            "2017": {
+                "birthRate": 10.98,
+                "deathRate": 13.24
+            },
+            "2018": {
+                "birthRate": 10.52,
+                "deathRate": 13.51
+            }
+        }
+    }, {
+        "id": 42,
+        "name": "Псковская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.59,
+                "deathRate": 17.51
+            },
+            "2018": {
+                "birthRate": 9.32,
+                "deathRate": 16.96
+            }
+        }
+    }, {
+        "id": 43,
+        "name": "Республика Адыгея",
+        "years": {
+            "2017": {
+                "birthRate": 10.55,
+                "deathRate": 12.65
+            },
+            "2018": {
+                "birthRate": 9.94,
+                "deathRate": 12.37
+            }
+        }
+    }, {
+        "id": 44,
+        "name": "Республика Алтай",
+        "years": {
+            "2017": {
+                "birthRate": 15.79,
+                "deathRate": 9.63
+            },
+            "2018": {
+                "birthRate": 15.21,
+                "deathRate": 9.86
+            }
+        }
+    }, {
+        "id": 45,
+        "name": "Республика Башкортостан",
+        "years": {
+            "2017": {
+                "birthRate": 12.12,
+                "deathRate": 12.37
+            },
+            "2018": {
+                "birthRate": 11.61,
+                "deathRate": 12.46
+            }
+        }
+    }, {
+        "id": 46,
+        "name": "Республика Бурятия",
+        "years": {
+            "2017": {
+                "birthRate": 14.54,
+                "deathRate": 10.61
+            },
+            "2018": {
+                "birthRate": 14.13,
+                "deathRate": 10.52
+            }
+        }
+    }, {
+        "id": 47,
+        "name": "Республика Дагестан",
+        "years": {
+            "2017": {
+                "birthRate": 16.42,
+                "deathRate": 5.08
+            },
+            "2018": {
+                "birthRate": 15.45,
+                "deathRate": 4.77
+            }
+        }
+    }, {
+        "id": 48,
+        "name": "Республика Ингушетия",
+        "years": {
+            "2017": {
+                "birthRate": 16.39,
+                "deathRate": 3.18
+            },
+            "2018": {
+                "birthRate": 15.56,
+                "deathRate": 3.01
+            }
+        }
+    }, {
+        "id": 49,
+        "name": "Республика Калмыкия",
+        "years": {
+            "2017": {
+                "birthRate": 10.99,
+                "deathRate": 10
+            },
+            "2018": {
+                "birthRate": 11.16,
+                "deathRate": 9.72
+            }
+        }
+    }, {
+        "id": 50,
+        "name": "Республика Карелия",
+        "years": {
+            "2017": {
+                "birthRate": 10.4,
+                "deathRate": 14.62
+            },
+            "2018": {
+                "birthRate": 9.78,
+                "deathRate": 14.79
+            }
+        }
+    }, {
+        "id": 51,
+        "name": "Республика Коми",
+        "years": {
+            "2017": {
+                "birthRate": 14.62,
+                "deathRate": 11.84
+            },
+            "2018": {
+                "birthRate": 10.34,
+                "deathRate": 11.98
+            }
+        }
+    }, {
+        "id": 52,
+        "name": "Республика Крым",
+        "years": {
+            "2017": {
+                "birthRate": 10.95,
+                "deathRate": 14.39
+            },
+            "2018": {
+                "birthRate": 10.6,
+                "deathRate": 13.97
+            }
+        }
+    }, {
+        "id": 53,
+        "name": "Республика Марий Эл",
+        "years": {
+            "2017": {
+                "birthRate": 11.94,
+                "deathRate": 12.45
+            },
+            "2018": {
+                "birthRate": 10.93,
+                "deathRate": 12.68
+            }
+        }
+    }, {
+        "id": 54,
+        "name": "Республика Мордовия",
+        "years": {
+            "2017": {
+                "birthRate": 8.55,
+                "deathRate": 13.48
+            },
+            "2018": {
+                "birthRate": 8.34,
+                "deathRate": 13.48
+            }
+        }
+    }, {
+        "id": 55,
+        "name": "Республика Саха (Якутия)",
+        "years": {
+            "2017": {
+                "birthRate": 14.47,
+                "deathRate": 8.11
+            },
+            "2018": {
+                "birthRate": 13.48,
+                "deathRate": 7.8
+            }
+        }
+    }, {
+        "id": 56,
+        "name": "Республика Северная Осетия-Алания",
+        "years": {
+            "2017": {
+                "birthRate": 12.81,
+                "deathRate": 10.19
+            },
+            "2018": {
+                "birthRate": 13.01,
+                "deathRate": 10.06
+            }
+        }
+    }, {
+        "id": 57,
+        "name": "Республика Татарстан",
+        "years": {
+            "2017": {
+                "birthRate": 12.36,
+                "deathRate": 11.29
+            },
+            "2018": {
+                "birthRate": 11.88,
+                "deathRate": 11.47
+            }
+        }
+    }, {
+        "id": 58,
+        "name": "Республика Тыва",
+        "years": {
+            "2017": {
+                "birthRate": 21.69,
+                "deathRate": 8.67
+            },
+            "2018": {
+                "birthRate": 20.35,
+                "deathRate": 8.78
+            }
+        }
+    }, {
+        "id": 59,
+        "name": "Республика Хакасия",
+        "years": {
+            "2017": {
+                "birthRate": 12.39,
+                "deathRate": 12.56
+            },
+            "2018": {
+                "birthRate": 11.64,
+                "deathRate": 12.46
+            }
+        }
+    }, {
+        "id": 60,
+        "name": "Ростовская область",
+        "years": {
+            "2017": {
+                "birthRate": 10.33,
+                "deathRate": 13.37
+            },
+            "2018": {
+                "birthRate": 9.78,
+                "deathRate": 13.45
+            }
+        }
+    }, {
+        "id": 61,
+        "name": "Рязанская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.84,
+                "deathRate": 15.35
+            },
+            "2018": {
+                "birthRate": 9.2,
+                "deathRate": 15.42
+            }
+        }
+    }, {
+        "id": 62,
+        "name": "Самарская область",
+        "years": {
+            "2017": {
+                "birthRate": 10.82,
+                "deathRate": 13.7
+            },
+            "2018": {
+                "birthRate": 10.38,
+                "deathRate": 13.5
+            }
+        }
+    }, {
+        "id": 63,
+        "name": "Санкт-Петербург",
+        "years": {
+            "2017": {
+                "birthRate": 12.44,
+                "deathRate": 11.32
+            },
+            "2018": {
+                "birthRate": 11.86,
+                "deathRate": 11.04
+            }
+        }
+    }, {
+        "id": 64,
+        "name": "Саратовская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.59,
+                "deathRate": 13.66
+            },
+            "2018": {
+                "birthRate": 9.04,
+                "deathRate": 13.75
+            }
+        }
+    }, {
+        "id": 65,
+        "name": "Сахалинская область",
+        "years": {
+            "2017": {
+                "birthRate": 12.86,
+                "deathRate": 11.93
+            },
+            "2018": {
+                "birthRate": 12.31,
+                "deathRate": 12.63
+            }
+        }
+    }, {
+        "id": 66,
+        "name": "Свердловская область",
+        "years": {
+            "2017": {
+                "birthRate": 12.39,
+                "deathRate": 13.33
+            },
+            "2018": {
+                "birthRate": 11.64,
+                "deathRate": 13.44
+            }
+        }
+    }, {
+        "id": 67,
+        "name": "Севастополь",
+        "years": {
+            "2017": {
+                "birthRate": 11.1,
+                "deathRate": 13.01
+            },
+            "2018": {
+                "birthRate": 10.14,
+                "deathRate": 12.71
+            }
+        }
+    }, {
+        "id": 68,
+        "name": "Смоленская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.12,
+                "deathRate": 15.59
+            },
+            "2018": {
+                "birthRate": 8.29,
+                "deathRate": 15.36
+            }
+        }
+    }, {
+        "id": 69,
+        "name": "Ставропольский край",
+        "years": {
+            "2017": {
+                "birthRate": 11.59,
+                "deathRate": 11.26
+            },
+            "2018": {
+                "birthRate": 10.52,
+                "deathRate": 11.26
+            }
+        }
+    }, {
+        "id": 70,
+        "name": "Тамбовская область",
+        "years": {
+            "2017": {
+                "birthRate": 8.62,
+                "deathRate": 15.2
+            },
+            "2018": {
+                "birthRate": 8.12,
+                "deathRate": 15.4
+            }
+        }
+    }, {
+        "id": 71,
+        "name": "Тверская область",
+        "years": {
+            "2017": {
+                "birthRate": 9.97,
+                "deathRate": 16.97
+            },
+            "2018": {
+                "birthRate": 9.13,
+                "deathRate": 16.92
+            }
+        }
+    }, {
+        "id": 72,
+        "name": "Томская область",
+        "years": {
+            "2017": {
+                "birthRate": 11.72,
+                "deathRate": 11.39
+            },
+            "2018": {
+                "birthRate": 10.95,
+                "deathRate": 11.1
+            }
+        }
+    }, {
+        "id": 73,
+        "name": "Тульская область",
+        "years": {
+            "2017": {
+                "birthRate": 8.99,
+                "deathRate": 16.54
+            },
+            "2018": {
+                "birthRate": 8.37,
+                "deathRate": 16.25
+            }
+        }
+    }, {
+        "id": 74,
+        "name": "Тюменская область (с ХМАО и ЯНАО)",
+        "years": {
+            "2017": {
+                "birthRate": 14.13,
+                "deathRate": 7.81
+            },
+            "2018": {
+                "birthRate": 13.53,
+                "deathRate": 7.88
+            }
+        }
+    }, {
+        "id": 75,
+        "name": "Удмуртская Республика",
+        "years": {
+            "2017": {
+                "birthRate": 11.87,
+                "deathRate": 11.98
+            },
+            "2018": {
+                "birthRate": 10.91,
+                "deathRate": 12.02
+            }
+        }
+    }, {
+        "id": 76,
+        "name": "Ульяновская область",
+        "years": {
+            "2017": {
+                "birthRate": 10.08,
+                "deathRate": 14.04
+            },
+            "2018": {
+                "birthRate": 9.66,
+                "deathRate": 14.03
+            }
+        }
+    }, {
+        "id": 77,
+        "name": "Хабаровский край",
+        "years": {
+            "2017": {
+                "birthRate": 12.05,
+                "deathRate": 13.03
+            },
+            "2018": {
+                "birthRate": 11.42,
+                "deathRate": 12.76
+            }
+        }
+    }, {
+        "id": 78,
+        "name": "Ханты-Мансийский автономный округ — Югра",
+        "years": {
+            "2017": {
+                "birthRate": 14.06,
+                "deathRate": 6.19
+            },
+            "2018": {
+                "birthRate": 13.48,
+                "deathRate": 6.22
+            }
+        }
+    }, {
+        "id": 79,
+        "name": "Челябинская область",
+        "years": {
+            "2017": {
+                "birthRate": 11.53,
+                "deathRate": 13.04
+            },
+            "2018": {
+                "birthRate": 10.88,
+                "deathRate": 13.14
+            }
+        }
+    }, {
+        "id": 80,
+        "name": "Чеченская Республика",
+        "years": {
+            "2017": {
+                "birthRate": 20.8,
+                "deathRate": 4.58
+            },
+            "2018": {
+                "birthRate": 20.06,
+                "deathRate": 4.19
+            }
+        }
+    }, {
+        "id": 81,
+        "name": "Чувашская Республика",
+        "years": {
+            "2017": {
+                "birthRate": 11.33,
+                "deathRate": 12.65
+            },
+            "2018": {
+                "birthRate": 10.66,
+                "deathRate": 12.46
+            }
+        }
+    }, {
+        "id": 82,
+        "name": "Чукотский автономный округ",
+        "years": {
+            "2017": {
+                "deathRate": 9.22,
+                "birthRate": 13.33
+            },
+            "2018": {
+                "birthRate": 12.5,
+                "deathRate": 11.05
+            }
+        }
+    }, {
+        "id": 83,
+        "name": "Ямало-Ненецкий автономный округ",
+        "years": {
+            "2017": {
+                "birthRate": 14.03,
+                "deathRate": 4.88
+            },
+            "2018": {
+                "birthRate": 13.35,
+                "deathRate": 4.66
+            }
+        }
+    }, {
+        "id": 84,
+        "name": "Ярославская область",
+        "years": {
+            "2017": {
+                "birthRate": 10.52,
+                "deathRate": 15.2
+            },
+            "2018": {
+                "birthRate": 9.87,
+                "deathRate": 14.97
+            }
+        }
+    }]
 }

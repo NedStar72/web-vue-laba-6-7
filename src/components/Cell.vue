@@ -1,8 +1,8 @@
 <template>
   <td @dblclick="dblclickHandler" :class="cellStyle">
-    <img v-if="increase" src="../assets/up-arrow.png" alt />
-    <img v-if="nocrease" src="../assets/minus.png" alt />
-    <img v-if="decrease" src="../assets/down-arrow.png" alt />
+    <img v-if="increase && !isEditing" src="../assets/up-arrow.png" alt />
+    <img v-if="nocrease && !isEditing" src="../assets/minus.png" alt />
+    <img v-if="decrease && !isEditing" src="../assets/down-arrow.png" alt />
     <span v-if="!isEditing">{{ value }}</span>
     <input
       v-else
@@ -79,7 +79,7 @@ export default {
       this.$emit(
         "update",
         this.propName,
-        this.inputType == "number" ? parseFloat(e.target.value) : e.target.value
+        this.inputType == "number" ? parseFloat(e.target.value) || 0 : e.target.value
       );
     }
   }
