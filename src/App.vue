@@ -67,10 +67,12 @@ export default {
     },
     rows() {
       return this.sortData(
-        this.filterData(
-          this.representData(this.my_data.data, this.my_header),
-          this.filter,
-          this.filterPropName
+        this.injectCrease(
+          this.filterData(
+            this.representData(this.my_data.data, this.my_header),
+            this.filter,
+            this.filterPropName
+          )
         ),
         this.sortCol
       );
@@ -112,7 +114,7 @@ export default {
             let cell = {
               propName: col.propName,
               value: undefined,
-              optionalData: col.optionalData
+              optionalData: { ...col.optionalData }
             };
 
             if (typeof cell.propName == "string") {
@@ -155,6 +157,21 @@ export default {
           else return this.sortDuration ? 1 : -1;
         })
       );
+    },
+    injectCrease(data) {
+      data &&
+        data.forEach(row => {
+          for (let index = 3; index < row.cells.length; index++) {
+            if (row.cells[index].value > row.cells[index - 2].value) {
+              row.cells[index].optionalData.crease = 1;
+            } else if (row.cells[index].value < row.cells[index - 2].value) {
+              row.cells[index].optionalData.crease = -1;
+            } else {
+              row.cells[index].optionalData.crease = 0;
+            }
+          }
+        });
+      return data;
     },
     addButtonClickHandler() {
       this.my_data.data.push({
