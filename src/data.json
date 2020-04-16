@@ -1,32 +1,4 @@
 {
-    "count": 2,
-    "data": [{
-            "id": 0,
-            "name": "Имя65",
-            "years": {
-                "2018": {
-                    "birthRate": 20.78,
-                    "deathRate": 11.1
-                },
-                "2019": {
-                    "birthRate": 20.78,
-                    "deathRate": 11.1
-                }
-            }
-        },
-        {
-            "id": 1,
-            "name": "Московская обл.",
-            "years": {
-                "2018": {
-                    "birthRate": 20.78,
-                    "deathRate": 11.1
-                },
-                "2019": {
-                    "birthRate": 20.78,
-                    "deathRate": 11.1
-                }
-            }
-        }
-    ]
+    "count": 0,
+    "data": []
 }

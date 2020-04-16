@@ -11,6 +11,13 @@
       @update="dataUpdateHandler"
       @sort="sortHandler"
     />
+    <div>Итог:</div>
+    <table class="mb-3">
+      <tr v-for="(col, i) in summary" :key="i">
+        <th class="pr-3">{{col.name}}</th>
+        <th>{{col.summary}}</th>
+      </tr>
+    </table>
     <div class="mb-3">
       <button
         v-if="true"
@@ -66,15 +73,34 @@ export default {
       );
     },
     rows() {
-      return this.sortData(
-        this.injectCrease(
+      return this.injectCrease(
+        this.sortData(
           this.filterData(
             this.representData(this.my_data.data, this.my_header),
             this.filter,
             this.filterPropName
-          )
-        ),
-        this.sortCol
+          ),
+          this.sortCol
+        )
+      );
+    },
+    summary() {
+      let rows =
+        this.rows &&
+        this.rows.reduce((arr, currRow) => {
+          currRow.cells.slice(1, currRow.cells.length).forEach((cell, i) => {
+            arr[i] += cell.value;
+          });
+          return arr;
+        }, new Array(this.my_header.length - 1).fill(0));
+      return (
+        this.my_header &&
+        this.my_header.slice(1, this.my_header.length).map((col, i) => {
+          return {
+            name: col.name,
+            summary: rows[i]
+          };
+        })
       );
     }
   },
