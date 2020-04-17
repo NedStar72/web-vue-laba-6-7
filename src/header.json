@@ -6,7 +6,7 @@
         "optionalData": {
             "editable": true,
             "cellStyle": "",
-            "inputStyle": "form-control d-inline-block mw-100 w-auto"
+            "inputStyle": "form-control d-inline-block mw-100 w-100"
         }
     },
     {
@@ -17,7 +17,7 @@
         "optionalData": {
             "editable": true,
             "cellStyle": "",
-            "inputStyle": "form-control d-inline-block mw-100 w-auto"
+            "inputStyle": "form-control d-inline-block mw-75"
         }
     },
     {
@@ -28,7 +28,7 @@
         "optionalData": {
             "editable": true,
             "cellStyle": "",
-            "inputStyle": "form-control d-inline-block mw-100 w-auto"
+            "inputStyle": "form-control d-inline-block mw-75"
         }
     },
     {
@@ -39,7 +39,7 @@
         "optionalData": {
             "editable": true,
             "cellStyle": "",
-            "inputStyle": "form-control d-inline-block mw-100 w-auto"
+            "inputStyle": "form-control d-inline-block mw-75"
         }
     },
     {
@@ -50,7 +50,7 @@
         "optionalData": {
             "editable": true,
             "cellStyle": "",
-            "inputStyle": "form-control d-inline-block mw-100 w-auto"
+            "inputStyle": "form-control d-inline-block mw-75"
         }
     }
 ]

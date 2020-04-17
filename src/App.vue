@@ -6,28 +6,24 @@
       <input type="text" v-model="filter" class="form-control d-inline-block mw-100 w-auto mr-3" />
     </div>
     <my-table
-      tableStyle="table table-striped table-borderless table-sorted"
+      tableStyle="table table-striped table-borderless table-sorted table-responsive"
       :header="header"
       :rows="rows"
       @update="dataUpdateHandler"
       @sort="sortHandler"
     />
-    <div>Итог:</div>
-    <table class="mb-3">
-      <tr v-for="(col, i) in summary" :key="i">
-        <th class="pr-3">{{col.name}}</th>
-        <th>{{col.summary}}</th>
-      </tr>
-    </table>
     <div class="mb-3">
+      <span class="font-weight-bold mr-2">Название региона</span>
+      <input type="text" ref="name" class="form-control d-inline-block mw-100 w-auto mr-3" />
       <button
         v-if="true"
         type="button"
         class="btn btn-success pl-5 pr-5"
         @click="addButtonClickHandler"
-      >Добавить элем.</button>
+      >Добавить регион</button>
     </div>
-    <div class="mb-2">
+    <div class="mb-3">
+      <span class="font-weight-bold mr-2">Год</span>
       <input type="number" ref="year" class="form-control d-inline-block mw-100 w-auto mr-3" />
       <button
         v-if="true"
@@ -74,35 +70,15 @@ export default {
       );
     },
     rows() {
-      return this.injectCrease(
-        this.sortData(
-          this.filterData(
-            this.representData(this.my_data.data, this.my_header),
-            this.filter,
-            this.filterPropName
-          ),
-          this.sortCol
-        )
+      let sortedData = this.sortData(
+        this.filterData(
+          this.representData(this.my_data.data, this.my_header),
+          this.filter,
+          this.filterPropName
+        ),
+        this.sortCol
       );
-    },
-    summary() {
-      let rows =
-        this.rows &&
-        this.rows.reduce((arr, currRow) => {
-          currRow.cells.slice(1, currRow.cells.length).forEach((cell, i) => {
-            arr[i] += cell.value;
-          });
-          return arr;
-        }, new Array(this.my_header.length - 1).fill(0));
-      return (
-        this.my_header &&
-        this.my_header.slice(1, this.my_header.length).map((col, i) => {
-          return {
-            name: col.name,
-            summary: rows[i]
-          };
-        })
-      );
+      return this.injectCrease(this.injectSummaryRow(sortedData));
     }
   },
   methods: {
@@ -202,8 +178,10 @@ export default {
       return data;
     },
     addButtonClickHandler() {
+      let name = this.$refs.name.value;
       this.my_data.data.push({
-        id: this.my_data.count++
+        id: this.my_data.count++,
+        name: name
       });
     },
     addYearHandler() {
@@ -245,6 +223,44 @@ export default {
     },
     syncHeader(newHeader) {
       localStorage.header = JSON.stringify(newHeader);
+    },
+    injectSummaryRow(data) {
+      let arr =
+        data &&
+        ["Сумма"].concat(
+          data.reduce((arr, currRow) => {
+            currRow.cells.slice(1, currRow.cells.length).forEach((cell, i) => {
+              arr[i] += cell.value;
+            });
+            return arr;
+          }, new Array(this.my_header.length - 1).fill(0))
+        );
+
+      arr =
+        arr &&
+        arr.map((val, i) => {
+          if (typeof val == "number") {
+            val = val.toFixed(2);
+          }
+          return val;
+        });
+
+      let summaryRow = arr && {
+        id: this.my_data.count,
+        cells: arr.map(val => {
+          return {
+            propName: "",
+            value: val,
+            optionalData: {
+              editable: false,
+              cellStyle: "font-weight-bold"
+            }
+          };
+        })
+      };
+      data && data.push(summaryRow);
+
+      return data;
     }
   },
   mounted() {
