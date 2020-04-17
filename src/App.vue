@@ -1,17 +1,6 @@
 <template>
   <div class="container">
     <h1 class="mt-3 mb-4">Демография России</h1>
-    <div>
-      <span class="font-weight-bold mr-2">Фильтр</span>
-      <input type="text" v-model="filter" class="form-control d-inline-block mw-100 w-auto mr-3" />
-    </div>
-    <my-table
-      tableStyle="table table-striped table-borderless table-sorted table-responsive"
-      :header="header"
-      :rows="rows"
-      @update="dataUpdateHandler"
-      @sort="sortHandler"
-    />
     <div class="mb-3">
       <span class="font-weight-bold mr-2">Название региона</span>
       <input type="text" ref="name" class="form-control d-inline-block mw-100 w-auto mr-3" />
@@ -32,6 +21,17 @@
         @click="addYearHandler"
       >Добавить год</button>
     </div>
+    <div class="mb-3">
+      <span class="font-weight-bold mr-2">Фильтр</span>
+      <input type="text" v-model="filter" class="form-control d-inline-block mw-100 w-auto mr-3" />
+    </div>
+    <my-table
+      tableStyle="table table-striped table-borderless table-sorted table-responsive"
+      :header="header"
+      :rows="rows"
+      @update="dataUpdateHandler"
+      @sort="sortHandler"
+    />
   </div>
 </template>
  
@@ -191,22 +191,22 @@ export default {
           name: year + " (рождаемость)",
           propName: ["years", year, "birthRate"],
           defaultValue: 0,
-          headerStyle: "position-relative sorting",
+          headerStyle: "position-relative sorting pr-4",
           optionalData: {
             editable: true,
             cellStyle: "",
-            inputStyle: "form-control d-inline-block mw-100 w-auto"
+            inputStyle: "form-control d-inline-block mw-75"
           }
         },
         {
           name: year + " (смертность)",
           propName: ["years", year, "deathRate"],
           defaultValue: 0,
-          headerStyle: "position-relative sorting",
+          headerStyle: "position-relative sorting pr-4",
           optionalData: {
             editable: true,
             cellStyle: "",
-            inputStyle: "form-control d-inline-block mw-100 w-auto"
+            inputStyle: "form-control d-inline-block mw-75"
           }
         }
       );
